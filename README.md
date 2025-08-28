@@ -33,6 +33,19 @@ you should go the following path to access the service and the swagger page at
 ```
 http://localhost:8080/user-registry-service/swagger-ui.html
 ```
+## REST api Endpoints
+The /user-registry and the /refresh-token endpoints are not secure by jwt token
+http://localhost:8080/user-registry-service/user-management/user-registry
+http://localhost:8080/user-registry-service/user-management/refresh-token
+
+The /all-users /update-user and /delete-user are secure by the jwt token
+and the token has to be passed as Authorization in the request
+http://localhost:8080/user-registry-service/user-management/all-users
+http://localhost:8080/user-registry-service/user-management/update-user
+http://localhost:8080/user-registry-service/user-management/delete-user
+
+
+
 
 Since this project use H2 in memory database, 
 you should use the following path to access to the database console.
